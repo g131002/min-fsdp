@@ -37,7 +37,7 @@ class AdamOptimizer:
 
 
 model = DummyModel()
-optimizer = AdamOptimizer(model.parameters(), lr=4.0)
+optimizer = AdamOptimizer(model.parameters(), lr=1e-1)
 
 input = torch.randn(10, generator=torch.Generator().manual_seed(42))
 target = torch.randn(1, generator=torch.Generator().manual_seed(42))
