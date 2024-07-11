@@ -22,8 +22,8 @@ class DummyModel(torch.nn.Module):
 
 
 @torch.no_grad()
-def check_model_from_reference(model):
-    ref_state_dict = torch.load("model_ref.pth", map_location="cpu")
+def check_model_from_reference(model, model_path="model_ref.pth"):
+    ref_state_dict = torch.load(model_path, map_location="cpu")
     model_state_dict = model.state_dict()
 
     for k in ref_state_dict.keys():

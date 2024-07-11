@@ -5,6 +5,14 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Python Debugger: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+        },
+        {
             "name": "Python: Debug DeepSpeed",
             "type": "debugpy",
             "request": "launch",
@@ -14,7 +22,7 @@
             "justMyCode": false,
             "args": [
                 "--num_gpus=2",
-                "/home/nsml/min-fsdp/journey/understanding_zero/0_adam_for_reference_ds.py",
+                "/home/nsml/min-fsdp/journey/understanding_zero/5_ds_zero_1.py",
                 "--deepspeed",
                 "--deepspeed_config=/home/nsml/min-fsdp/journey/understanding_zero/ds_config.json"
             ]
