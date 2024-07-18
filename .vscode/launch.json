@@ -5,6 +5,20 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Python Debugger: 7_tp",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "/home/nsml/.local/bin/torchrun",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": [
+                "--nnodes=1",
+                "--nproc_per_node=2",
+                "--rdzv-endpoint=0.0.0.0:5000",
+                "/home/nsml/min-fsdp/journey/understanding_zero/7_tp.py"
+            ]
+        },
+        {
             "name": "Python Debugger: 6_ds_zero_1_impl",
             "type": "debugpy",
             "request": "launch",
