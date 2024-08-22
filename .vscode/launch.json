@@ -5,6 +5,65 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Python Debugger: 2_transformer_sequence_parallel_test",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "/usr/local/bin/torchrun",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": [
+                "--nnodes=1",
+                "--nproc_per_node=2",
+                "--rdzv-endpoint=0.0.0.0:5000",
+                "/mnt/chatbot30TB/nell/deepspeed_study/min-fsdp/journey/understanding_tensor_parallel/2_transformer_sequence_parallel_test.py"
+            ]
+        },
+        {
+            "name": "Python Debugger: 2_transformer_sequence_parallel",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "/usr/local/bin/torchrun",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": [
+                "--nnodes=1",
+                "--nproc_per_node=2",
+                "--rdzv-endpoint=0.0.0.0:5000",
+                "/mnt/chatbot30TB/nell/deepspeed_study/min-fsdp/journey/understanding_tensor_parallel/2_transformer_sequence_parallel.py",
+                "--sp_degree", "2",
+                "--use_torch_profiler"
+            ]
+        },
+        {
+            "name": "Python Debugger: 1_transformer_tensor_parallel",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "/usr/local/bin/torchrun",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": [
+                "--nnodes=1",
+                "--nproc_per_node=2",
+                "--rdzv-endpoint=0.0.0.0:5000",
+                "/mnt/chatbot30TB/nell/deepspeed_study/min-fsdp/journey/understanding_tensor_parallel/1_transformer_tensor_parallel.py",
+                "--TP"
+            ]
+        },
+        {
+            "name": "Python Debugger: test_device_mesh",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "/usr/local/bin/torchrun",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": [
+                "--nnodes=1",
+                "--nproc_per_node=8",
+                "--rdzv-endpoint=0.0.0.0:5000",
+                "/mnt/chatbot30TB/nell/deepspeed_study/min-fsdp/journey/understanding_tensor_parallel/test_device_mesh.py"
+            ]
+        },
+        {
             "name": "Python Debugger: 7_tp",
             "type": "debugpy",
             "request": "launch",
